@@ -1,16 +1,13 @@
 import React from 'react'
-import Footer from '../components/footer'
-import Header from '../components/header'
+import Layout from '../components/layout'
 
 const ContactPage = () => {
   return(
-    <div>
-      <Header />
+    <Layout>
       <h1>Get in Touch</h1>
       <h2>contact@austinjblake.dev</h2>
-      <p>Check out my work! <a href='https://github.com/austinjblake' target="_blank">Github</a></p>
-      <Footer />
-    </div>
+      <p>Check out my work! <a href='https://github.com/austinjblake' target="_blank" rel="noopener noreferrer">Github</a></p>
+    </Layout>
   )
 }
 
