@@ -4,6 +4,15 @@ module.exports = {
     author: 'Austin Blake' 
   },
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    `gatsby-plugin-playground`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    'gatsby-transformer-remark'
   ]
 }
