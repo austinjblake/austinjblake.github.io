@@ -5,6 +5,8 @@ date: '2019-05-05'
 
 Starting my first Gatsby project!
 
+![Grass](./grass.png)
+
 ## Topics
 
 1. Gatsby
