@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Austin J Blake-Full Stack Web Development',
@@ -7,8 +11,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'y2epqr6dn7hj',
-        accessToken: 'JgleBy-Z2x1D_LjD3qfeea9HvS0zlfHfN6mMeTJJEmo'
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
     'gatsby-plugin-sass',
@@ -39,6 +43,3 @@ module.exports = {
   ]
 }
 
-require("dotenv").config({
-  path: `.env.development`,
-})
