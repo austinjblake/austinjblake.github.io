@@ -1,13 +1,14 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 })
 
 module.exports = {
   siteMetadata: {
-    title: 'Austin J Blake-Full Stack Web Development',
+    title: 'Austin J Blake',
     author: 'Austin Blake' 
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
       options: {
