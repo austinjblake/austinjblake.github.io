@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import Icons from './icons'
 
 import headerStyles from './header.module.scss'
 
@@ -21,6 +22,7 @@ const Header = () => {
           {data.site.siteMetadata.title}
         </Link>
       </h1>
+      <Icons />
       <nav>
         <ul className={headerStyles.navList}>
           <li>
