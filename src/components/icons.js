@@ -4,6 +4,7 @@ import pdfImage from './pdf.png'
 import githubImage from './github.png'
 import mailImage from './mail.png'
 import iconsStyles from './icons.module.scss'
+import Resume from '../pages/resume.pdf'
 
 const Icons = () => {
   return (
@@ -16,22 +17,30 @@ const Icons = () => {
           title="Checkout my Github profile"
         />
       </a>
-      <Link to="/resume">
+      <a href="/resume" target="_blank" rel="noopener noreferrer">
         <img 
           className={iconsStyles.icon} 
           src={pdfImage} 
           alt="resume"
           title="Download a PDF copy of my resume"
         />
-      </Link>
-      <Link to="/email">
+      </a>
+      <a href="mailto:contact@austinjblake.dev">
         <img 
           className={iconsStyles.icon} 
           src={mailImage} 
           alt="email"
           title="Get in touch"
         />
-      </Link>
+      </a>
+      <a href={Resume} target="_blank" rel="noopener noreferrer" type="application/pdf">
+      <img 
+        className={iconsStyles.icon} 
+        src={pdfImage} 
+        alt="resume"
+        title="Download a PDF copy of my resume"
+      />
+    </a>
     </div>
   )
 }

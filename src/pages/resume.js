@@ -1,36 +1,45 @@
-import React from 'react'
+import React, { Component } from "react"
+import { Document, Page } from "react-pdf"
 import Resume from './resume.pdf'
 import PDFJS from 'pdfjs-dist'
+import "react-pdf/dist/Page/AnnotationLayer.css"
 
-const showResume = () => {
-  return(
-    // simple.js
-    (async () => {
-      const loadingTask = PDFJS.getDocument({Resume});
-      const pdf = await loadingTask.promise;
+export default class App extends Component {
+  state = { numPages: null, pageNumber: 1 };
 
-      // Load information from the first page.
-      const page = await pdf.getPage(1);
+  onDocumentLoadSuccess = ({ numPages }) => {
+    this.setState({ numPages });
+  };
 
-      const scale = 1;
-      const viewport = page.getViewport(scale);
+  goToPrevPage = () =>
+    this.setState(state => ({ pageNumber: state.pageNumber - 1 }));
+  goToNextPage = () =>
+    this.setState(state => ({ pageNumber: state.pageNumber + 1 }));
 
-      // Apply page dimensions to the <canvas> element.
-      const canvas = document.getElementById("pdf");
-      const context = canvas.getContext("2d");
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
+  render() {
+    const { pageNumber, numPages } = this.state;
 
-      // Render the page into the <canvas> element.
-      const renderContext = {
-        canvasContext: context,
-        viewport: viewport
-      };
-      await page.render(renderContext);
-      console.log("Page rendered!");
-    })
+    return (
+      <div>
+        <nav>
+          <button onClick={this.goToPrevPage}>Prev</button>
+          <button onClick={this.goToNextPage}>Next</button>
+          <a href={Resume} download> <button>Download</button></a>
+        </nav>
 
-  )
+        <div style={{ width: 600 }}>
+          <Document
+            file={Resume}
+            onLoadSuccess={this.onDocumentLoadSuccess}
+          >
+            <Page pageNumber={pageNumber} width={600} />
+          </Document>
+        </div>
+
+        <p>
+          Page {pageNumber} of {numPages}
+        </p>
+      </div>
+    );
+  }
 }
-
-export default showResume
