@@ -26,11 +26,9 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.12",
     "node-sass": "^4.12.0",
-    "pdfjs-dist": "^2.0.943",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "react-pdf": "^4.0.5"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "env-cmd": "^9.0.0",
