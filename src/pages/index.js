@@ -19,7 +19,6 @@ const IndexPage = () => {
         <Icons />
         <h1> Hello,</h1>
         <h2>I'm Austin, a full stack Web Developer living in Iowa</h2>
-        <p>Need a developer? <Link to="/contact">Get in touch</Link></p>
       </div>
       <Footer />
     </div>

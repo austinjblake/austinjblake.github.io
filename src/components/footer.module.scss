@@ -1,3 +1,25 @@
 .footer {
   margin-top: 3rem;
 }
+
+.contact-container {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-item {
+  flex-grow: 2;
+  margin: auto;
+  text-align: center;
+}
+
+.divider {
+  flex-grow: 1;
+  margin: auto;
+  padding: 3rem;
+  background-image: linear-gradient(#000, #000);
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

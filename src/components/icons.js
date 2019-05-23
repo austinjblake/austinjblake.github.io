@@ -21,10 +21,10 @@ const Icons = () => {
         className={iconsStyles.icon} 
         src={pdfImage} 
         alt="resume"
-        title="Download a PDF copy of my resume"
+        title="View and download a PDF copy of my resume"
       />
       </a>
-      <a href="mailto:contact@austinjblake.dev">
+      <a href="mailto:devjobs@austinjblake.dev">
         <img 
           className={iconsStyles.icon} 
           src={mailImage} 
