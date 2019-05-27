@@ -1,7 +1,8 @@
 import React from 'react'
 import pdfImage from './pdf.png'
-import githubImage from './github.png'
+import githubImage from './github.jpg'
 import mailImage from './mail.png'
+import linkedinImage from './linkedin.png'
 import iconsStyles from './icons.module.scss'
 import Resume from '../pages/resume.pdf'
 
@@ -30,6 +31,14 @@ const Icons = () => {
           src={mailImage} 
           alt="email"
           title="Get in touch"
+        />
+      </a>
+      <a href='www.linkedin.com/in/austin-blake-277333186' target="_blank" rel="noopener noreferrer">
+        <img 
+          className={iconsStyles.icon} 
+          src={linkedinImage} 
+          alt="linkedin"
+          title="Visit me on LinkedIn"
         />
       </a>
     </div>

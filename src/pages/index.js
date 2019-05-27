@@ -24,7 +24,7 @@ const IndexPage = () => {
         <h2>I'm Austin, a full stack Web Developer living in the Quad Cites</h2>
           <div className={contentStyles.about}>
             <h2><em><i>Self taught dev...</i></em></h2>
-            <Fade bottom>
+            <Fade bottom delay='1000'>
             <h4>Making beautiful and responsive websites</h4>
             <h4>Fast and smart webapps</h4>
             <h4>With a strong focus on Javascript</h4>
