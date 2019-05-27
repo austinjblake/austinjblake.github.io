@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={footerStyles.createdBy}>
-        <p>Created by Austin Blake, ©2019. Powered by <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">Gatsby</a></p>
+        <p>Created by Austin Blake, ©2019.</p>
       </div>
     </footer>
   )
