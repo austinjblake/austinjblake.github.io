@@ -1,5 +1,5 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./carouselcss.css";
 import { Carousel } from 'react-responsive-carousel';
 import { graphql, useStaticQuery } from 'gatsby'
 import carouselStyles from './carousel.module.scss'
@@ -39,9 +39,9 @@ const DemoCarousel = () => {
                   <img alt={edge.node.name} src={edge.node.screenshot.file.url} />
                   <p>{edge.node.name}</p>
                   <div className={carouselStyles.buttonbox}>
-                    <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>View Live Site</button></a> 
-                    <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>See github repo</button></a> 
-                    <a href={edge.node.writeupurl} target="_blank" rel="noopener noreferrer"><button>Read full writeup</button></a>
+                    <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 
+                    <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>Github repo</button></a> 
+                    <a href={edge.node.writeupurl} target="_blank" rel="noopener noreferrer"><button>Full writeup</button></a>
                   </div>
                 </div>
               )
