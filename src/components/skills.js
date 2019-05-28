@@ -52,14 +52,14 @@ const SkillsBox = () => {
 
   return(
     <div className={skillsStyles.skillsSection}>
-      <h2>Some technologies I use</h2>
+      <h1>Tech Stack</h1>
       <div className={skillsStyles.container}>
         <h2>Front End</h2>
         <div id="frontEnd" className={skillsStyles.icons}>
           {data.frontData.edges.map((edge) => {
             return (
               <div className={skillsStyles.test}>
-                <img alt={edge.node.slug} src={edge.node.icon.file.url} />
+                <img className={skillsStyles.image} alt={edge.node.slug} src={edge.node.icon.file.url} />
                 <p id="text">{edge.node.text}</p>
               </div>
             )
@@ -70,7 +70,7 @@ const SkillsBox = () => {
           {data.backData.edges.map((edge) => {
             return (
               <div className={skillsStyles.test}>
-                <img alt={edge.node.slug} src={edge.node.icon.file.url} />
+                <img className={skillsStyles.image} alt={edge.node.slug} src={edge.node.icon.file.url} />
                 <p id="text">{edge.node.text}</p>
               </div>
             )

@@ -6,6 +6,7 @@ import Footer from '../components/footer'
 import headerStyles from '../components/header.module.scss'
 import Icons from '../components/icons'
 import SkillsBox from '../components/skills'
+import DemoCarousel from '../components/carousel'
 import contentStyles from '../components/content.module.scss'
 import Fade from 'react-reveal/Fade'
 
@@ -21,18 +22,18 @@ const IndexPage = () => {
         </h1>
         <Icons />
         <h1> Hello,</h1>
-        <h2>I'm Austin, a full stack Web Developer living in the Quad Cites</h2>
+        <h2>I'm Austin, a self-taught Full Stack Web Developer living in the Quad Cites</h2>
           <div className={contentStyles.about}>
-            <h2><em><i>Self taught dev...</i></em></h2>
             <Fade bottom delay='1000'>
-            <h4>Making beautiful and responsive websites</h4>
-            <h4>Fast and smart webapps</h4>
-            <h4>With a strong focus on Javascript</h4>
-            <h4>And a problem-solving oriented approach</h4>
+            <p>Making beautiful and responsive websites</p>
+            <p>Fast and smart webapps</p>
+            <p>With a strong focus on Javascript</p>
+            <p>And a problem-solving oriented approach</p>
             </Fade>
           </div>
           
         <SkillsBox />
+        <DemoCarousel />
       </div>
       <Footer />
     </div>
