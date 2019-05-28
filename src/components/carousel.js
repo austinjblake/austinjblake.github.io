@@ -40,8 +40,8 @@ const DemoCarousel = () => {
                   <p>{edge.node.name}</p>
                   <div className={carouselStyles.buttonbox}>
                     <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 
-                    <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>Github repo</button></a> 
-                    <a href={edge.node.writeupurl} target="_blank" rel="noopener noreferrer"><button>Full writeup</button></a>
+                    <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>Github Repo</button></a> 
+                    <a href={edge.node.writeupurl} target="_blank" rel="noopener noreferrer"><button>Full Writeup</button></a>
                   </div>
                 </div>
               )
