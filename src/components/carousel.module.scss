@@ -41,3 +41,13 @@ button:hover{
   background-color: white;
   border: none;
 }
+
+.listbutton {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.listbutton button {
+  background-color: rgb(30, 42, 68);
+}

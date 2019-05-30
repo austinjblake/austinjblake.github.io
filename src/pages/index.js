@@ -6,7 +6,7 @@ import Footer from '../components/footer'
 import headerStyles from '../components/header.module.scss'
 import Icons from '../components/icons'
 import SkillsBox from '../components/skills'
-import DemoCarousel from '../components/carousel'
+import ProjectCarousel from '../components/carousel'
 import contentStyles from '../components/content.module.scss'
 import Fade from 'react-reveal/Fade'
 
@@ -31,7 +31,7 @@ const IndexPage = () => {
           </div>
           
         <SkillsBox />
-        <DemoCarousel />
+        <ProjectCarousel />
       </div>
       <Footer />
     </div>

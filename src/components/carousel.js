@@ -1,12 +1,12 @@
 import React from 'react';
 import "./carouselcss.css";
 import { Carousel } from 'react-responsive-carousel';
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import carouselStyles from './carousel.module.scss'
 
 
 
-const DemoCarousel = () => {
+const ProjectCarousel = () => {
   const data = useStaticQuery(graphql`
   query {
     allContentfulProjects (
@@ -18,7 +18,8 @@ const DemoCarousel = () => {
           rank
           url
           github
-          writeupurl
+          slug
+          description
           screenshot {
             file {
               url
@@ -41,14 +42,19 @@ const DemoCarousel = () => {
                   <div className={carouselStyles.buttonbox}>
                     <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 
                     <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>Github Repo</button></a> 
-                    <a href={edge.node.writeupurl} target="_blank" rel="noopener noreferrer"><button>Full Writeup</button></a>
+                    <a href={`./projects/${edge.node.slug}`} target="_blank" rel="noopener noreferrer"><button>Full Writeup</button></a>
                   </div>
                 </div>
               )
             })}
           </Carousel>
+          <div className={carouselStyles.listbutton}>
+            <Link to='/projects'>
+              <button>Complete Project List</button>
+            </Link>
+          </div>
         </div>
       );
 };
 
-export default DemoCarousel
+export default ProjectCarousel
