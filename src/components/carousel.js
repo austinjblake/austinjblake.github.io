@@ -37,7 +37,12 @@ const ProjectCarousel = () => {
             {data.allContentfulProjects.edges.map((edge) => {
               return (
                 <div className={carouselStyles.slide}>
-                  <img alt={edge.node.name} src={edge.node.screenshot.file.url} />
+                  <div className={carouselStyles.imagecontainer}>
+                    <div className={carouselStyles.overlay}>
+                      <div className={carouselStyles.description}>{edge.node.description}</div>
+                    </div>
+                    <img alt={edge.node.name} src={edge.node.screenshot.file.url} />
+                  </div>
                   <p>{edge.node.name}</p>
                   <div className={carouselStyles.buttonbox}>
                     <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 

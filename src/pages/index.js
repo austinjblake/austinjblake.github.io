@@ -29,7 +29,6 @@ const IndexPage = () => {
             <Fade bottom delay='750'><p>With a strong focus on Javascript</p></Fade>
             <Fade bottom delay='1000'><p>And a problem-solving oriented approach</p></Fade>
           </div>
-          
         <SkillsBox />
         <ProjectCarousel />
       </div>
