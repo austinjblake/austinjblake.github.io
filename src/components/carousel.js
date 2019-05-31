@@ -11,6 +11,7 @@ const ProjectCarousel = () => {
   query {
     allContentfulProjects (
       sort: {fields: [rank], order: ASC }
+      limit: 4
     ) {
       edges {
         node {
@@ -47,7 +48,7 @@ const ProjectCarousel = () => {
                   <div className={carouselStyles.buttonbox}>
                     <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 
                     <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>Github Repo</button></a> 
-                    <a href={`./projects/${edge.node.slug}`} target="_blank" rel="noopener noreferrer"><button>Full Writeup</button></a>
+                    <Link to={`./projects/${edge.node.slug}`}><button>Full Writeup</button></Link>
                   </div>
                 </div>
               )

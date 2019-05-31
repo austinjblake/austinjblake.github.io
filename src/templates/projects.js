@@ -9,6 +9,9 @@ export const query = graphql`
     contentfulProjects(slug: {eq: $slug}){
       name
       description
+      writeup {
+        json
+      }
     }
   }
 `
@@ -27,7 +30,8 @@ const Project = (props) => {
     <Layout>
       <Head title={props.data.contentfulProjects.name} />
       <h1>{props.data.contentfulProjects.name}</h1>
-      <p>{props.data.contentfulProjects.description}</p>
+      <h5>{props.data.contentfulProjects.description}</h5>
+      {documentToReactComponents(props.data.contentfulProjects.writeup.json, options)}
     </Layout>
   )
 }
