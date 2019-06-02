@@ -58,7 +58,7 @@ const SkillsBox = () => {
         <div id="frontEnd" className={skillsStyles.icons}>
           {data.frontData.edges.map((edge) => {
             return (
-              <div className={skillsStyles.test}>
+              <div key={edge.node.slug} className={skillsStyles.test}>
                 <img className={skillsStyles.image} alt={edge.node.slug} src={edge.node.icon.file.url} />
                 <p id="text">{edge.node.text}</p>
               </div>
@@ -69,7 +69,7 @@ const SkillsBox = () => {
         <div id="backEnd" className={skillsStyles.icons}>
           {data.backData.edges.map((edge) => {
             return (
-              <div className={skillsStyles.test}>
+              <div key={edge.node.slug} className={skillsStyles.test}>
                 <img className={skillsStyles.image} alt={edge.node.slug} src={edge.node.icon.file.url} />
                 <p id="text">{edge.node.text}</p>
               </div>

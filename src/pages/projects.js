@@ -31,8 +31,8 @@ const ProjectsPage = () => {
       <ol className={blogStyles.posts}>
         {data.allContentfulProjects.edges.map((edge) => {
           return (
-            <li className={blogStyles.post}>
-              <Link to={`./projects/${edge.node.slug}`}> 
+            <li key={edge.node.slug} className={blogStyles.post}>
+              <Link to={`/projects/${edge.node.slug}`}> 
                 <h2>{edge.node.name}</h2>
                 <p>{edge.node.description}</p>
               </Link>

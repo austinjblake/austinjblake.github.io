@@ -37,7 +37,7 @@ const ProjectCarousel = () => {
           <Carousel className={carouselStyles.carousel} showThumbs={false} useKeyboardArrows={true} infiniteLoop={true} showStatus={true} showIndicators={false}>
             {data.allContentfulProjects.edges.map((edge) => {
               return (
-                <div className={carouselStyles.slide}>
+                <div key={edge.node.slug} className={carouselStyles.slide}>
                   <div className={carouselStyles.imagecontainer}>
                     <div className={carouselStyles.overlay}>
                       <div className={carouselStyles.description}>{edge.node.description}</div>
@@ -48,7 +48,7 @@ const ProjectCarousel = () => {
                   <div className={carouselStyles.buttonbox}>
                     <a href={edge.node.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 
                     <a href={edge.node.github} target="_blank" rel="noopener noreferrer"><button>Github Repo</button></a> 
-                    <Link to={`./projects/${edge.node.slug}`}><button>Full Writeup</button></Link>
+                    <Link to={`/projects/${edge.node.slug}`}><button>Full Writeup</button></Link>
                   </div>
                 </div>
               )
