@@ -1,8 +1,4 @@
 import React from 'react'
-import pdfImage from './pdf.png'
-import githubImage from './github.jpg'
-import mailImage from './mail.png'
-import linkedinImage from './linkedin.png'
 import iconsStyles from './icons.module.scss'
 import Resume from '../pages/resume.pdf'
 import { graphql, useStaticQuery } from 'gatsby'
