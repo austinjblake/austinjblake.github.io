@@ -3,6 +3,7 @@ import "./carouselcss.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import carouselStyles from './carousel.module.scss'
+import Img from "gatsby-image"
 
 
 
@@ -22,6 +23,9 @@ const ProjectCarousel = () => {
           slug
           description
           screenshot {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
             file {
               url
             }
@@ -42,7 +46,7 @@ const ProjectCarousel = () => {
                     <div className={carouselStyles.overlay}>
                       <div className={carouselStyles.description}>{edge.node.description}</div>
                     </div>
-                    <img alt={edge.node.name} src={edge.node.screenshot.file.url} />
+                    <Img alt={edge.node.name} fluid={edge.node.screenshot.fluid} />
                   </div>
                   <p>{edge.node.name}</p>
                   <div className={carouselStyles.buttonbox}>

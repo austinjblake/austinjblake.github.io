@@ -17,7 +17,15 @@ const ProjectsPage = () => {
           node {
             name
             slug
-            description
+            description 
+            screenshot {
+              fluid {
+                ...GatsbyContentfulFluid
+              }
+              file {
+                url
+              }
+            }
           }
         }
       }

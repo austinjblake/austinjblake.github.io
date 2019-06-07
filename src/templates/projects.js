@@ -4,6 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import carouselStyles from '../components/carousel.module.scss'
+import Img from "gatsby-image"
 
 export const query = graphql`
   query($slug: String!) {
@@ -14,6 +15,14 @@ export const query = graphql`
       github
       writeup {
         json
+      }
+      screenshot {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        file {
+          url
+        }
       }
     }
   }
@@ -38,6 +47,7 @@ const Project = (props) => {
         <a href={props.data.contentfulProjects.url} target="_blank" rel="noopener noreferrer"><button>Live Site</button></a> 
         <a href={props.data.contentfulProjects.github} target="_blank" rel="noopener noreferrer"><button>Github Repo</button></a> 
       </div>
+      <Img alt={props.data.contentfulProjects.name} fluid={props.data.contentfulProjects.screenshot.fluid} />
       {documentToReactComponents(props.data.contentfulProjects.writeup.json, options)}
       <div className={carouselStyles.listbutton}>
         <Link to='/projects'>
