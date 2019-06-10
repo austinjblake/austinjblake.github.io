@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
@@ -8,8 +7,8 @@ const AboutPage = () => {
     <Layout>
       <Head title="About" />
       <h1>About Me</h1>
-      <p>I am a self taught full stack Web Developer with a focus on Javascript, Node.js, and React. I absolutely love learning new things every day and solving problems</p>
-      <h2><Link to='/contact'>Contact Me</Link></h2>
+      <p>I am a Self-taught developer with experience building real world applications with the latest frameworks and technologies, with a special focus on React. I back all this up with a strong foundational knowledge of Javascript and am constantly expanding and solidifying what I know. I do all of this because I truly enjoy being a developer, solving problems, and learning new things!</p>
+      <p>Currently open to new opportunities in a Developer role--Front End or FullStack</p>
     </Layout>
   )
 }

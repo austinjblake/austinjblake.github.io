@@ -7,8 +7,8 @@ const ContactPage = () => {
     <Layout>
       <Head title="Contact" />
       <h1>Get in Touch</h1>
-      <h2>contact@austinjblake.dev</h2>
-      <p>Check out my work! <a href='https://github.com/austinjblake' target="_blank" rel="noopener noreferrer">Github</a></p>
+      <h2>devjobs@austinjblake.dev</h2>
+      <p>I'm actively looking to join an open environment where I can use my skills to make a difference with people who are as excited about what they are doing as I am!</p>
     </Layout>
   )
 }
