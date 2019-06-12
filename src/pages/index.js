@@ -24,10 +24,10 @@ const IndexPage = () => {
         <h1> Hello,</h1>
         <h2>I'm Austin, a self-taught Full Stack Web Developer living in the Quad Cites</h2>
           <div className={contentStyles.about}>
-            <Fade bottom delay={250}><p>Making beautiful and responsive websites</p></Fade>
-            <Fade bottom delay={500}><p>Fast and smart webapps</p></Fade>
-            <Fade bottom delay={750}><p>With a strong focus on Javascript</p></Fade>
-            <Fade bottom delay={1000}><p>And a problem-solving oriented approach</p></Fade>
+            <Fade bottom delay={150}><p>Making beautiful and responsive websites</p></Fade>
+            <Fade bottom delay={300}><p>Fast and smart webapps</p></Fade>
+            <Fade bottom delay={450}><p>With a strong focus on Javascript</p></Fade>
+            <Fade bottom delay={600}><p>And a problem-solving oriented approach</p></Fade>
           </div>
         <SkillsBox />
         <ProjectCarousel />
