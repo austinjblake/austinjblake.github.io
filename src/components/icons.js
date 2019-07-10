@@ -56,7 +56,7 @@ const Icons = () => {
           title="Get in touch"
         />
       </a>
-      <a href='https://www.linkedin.com/in/austin-blake-277333186' target="_blank" rel="noopener noreferrer">
+      <a href='https://www.linkedin.com/in/austinjblake/' target="_blank" rel="noopener noreferrer">
         <img 
           className={iconsStyles.icon} 
           src={data.linkedin.file.url} 
