@@ -16,7 +16,7 @@
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "dotenv": "^8.0.0",
     "fstream": "^1.0.12",
-    "gatsby": "^2.4.2",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-playground": "^1.0.6",
     "gatsby-plugin-react-helmet": "^3.0.12",
